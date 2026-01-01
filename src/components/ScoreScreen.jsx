@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import DancingCelebration from './DancingCelebration';
 
-const ScoreScreen = ({ score, totalQuestions, difficulty, onPlayAgain }) => {
+const ScoreScreen = ({ score, totalQuestions, level, onNextLevel, onBackToMenu }) => {
   const [showCelebration, setShowCelebration] = useState(false);
   const percentage = (score / totalQuestions) * 100;
   let message = "";
@@ -33,6 +33,8 @@ const ScoreScreen = ({ score, totalQuestions, difficulty, onPlayAgain }) => {
     }
   }, [percentage]);
 
+  const hasNextLevel = level < 4;
+
   return (
     <>
       {showCelebration && (
@@ -53,14 +55,28 @@ const ScoreScreen = ({ score, totalQuestions, difficulty, onPlayAgain }) => {
           <p className="text-3xl md:text-4xl text-white mb-12 drop-shadow">
             {message}
           </p>
-          <button
-            onClick={onPlayAgain}
-            className="bg-white text-kid-purple px-12 py-6 rounded-full text-3xl font-bold 
-                     hover:scale-110 transform transition-all duration-300 shadow-2xl
-                     hover:shadow-3xl active:scale-95"
-          >
-            Play Again 🔄
-          </button>
+          
+          <div className="flex flex-col gap-4">
+            {hasNextLevel && (
+              <button
+                onClick={onNextLevel}
+                className="bg-kid-green text-white px-12 py-6 rounded-full text-2xl md:text-3xl font-bold 
+                         hover:scale-110 transform transition-all duration-300 shadow-2xl
+                         hover:shadow-3xl active:scale-95"
+              >
+                Next Level ➡️ Level {level + 1}
+              </button>
+            )}
+            
+            <button
+              onClick={onBackToMenu}
+              className="bg-white text-kid-purple px-12 py-6 rounded-full text-2xl md:text-3xl font-bold 
+                       hover:scale-110 transform transition-all duration-300 shadow-2xl
+                       hover:shadow-3xl active:scale-95"
+            >
+              Back to Menu 🏠
+            </button>
+          </div>
         </div>
       </div>
     </>

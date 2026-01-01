@@ -4,9 +4,33 @@ const QuizScreen = ({
   totalQuestions,
   selectedAnswer,
   isAnswered,
-  onAnswerClick 
+  selectedLanguage,
+  onAnswerClick,
+  onBack
 }) => {
   const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+
+  // Get question text based on selected language
+  const getQuestionText = () => {
+    if (selectedLanguage === 'finnish') {
+      // Show all three: Nepali + English + Finnish
+      return (
+        <div className="space-y-3">
+          <p className="text-kid-purple">{currentQuestion.question.nepali}</p>
+          <p className="text-kid-blue">{currentQuestion.question.english}</p>
+          <p className="text-kid-green">{currentQuestion.question.finnish}</p>
+        </div>
+      );
+    } else {
+      // Show English + Nepali
+      return (
+        <div className="space-y-3">
+          <p className="text-kid-blue">{currentQuestion.question.english}</p>
+          <p className="text-kid-purple">{currentQuestion.question.nepali}</p>
+        </div>
+      );
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-kid-yellow via-kid-blue to-kid-purple p-4">
@@ -26,9 +50,9 @@ const QuizScreen = ({
       {/* Question Card */}
       <div className="max-w-4xl mx-auto mt-8">
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl animate-bounce-in">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">
-            {currentQuestion.question}
-          </h3>
+          <div className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-12 leading-relaxed">
+            {getQuestionText()}
+          </div>
 
           {/* Options */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -58,6 +82,18 @@ const QuizScreen = ({
                 </button>
               );
             })}
+          </div>
+
+          {/* Back Button */}
+          <div className="mt-8">
+            <button
+              onClick={onBack}
+              className="w-full bg-white text-kid-purple px-6 py-3 rounded-full text-xl font-bold 
+                       hover:scale-105 transform transition-all duration-300 shadow-lg
+                       hover:shadow-xl active:scale-95 border-2 border-kid-purple"
+            >
+              ← Back to Levels
+            </button>
           </div>
         </div>
       </div>
