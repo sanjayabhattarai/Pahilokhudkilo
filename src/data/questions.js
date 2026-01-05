@@ -20,6 +20,15 @@ export const categories = [
     hasGroups: true
   },
   {
+    id: 'halant',
+    name: {
+      nepali: 'हलन्त',
+      english: 'Halg Consonants',
+      finnish: 'Puolikonsonantti'
+    },
+    emoji: '🔠'
+  },
+  {
     id: 'baarahkhari',
     name: {
       nepali: 'बाह्रखरी',
@@ -27,6 +36,15 @@ export const categories = [
       finnish: 'Baarahkhari'
     },
     emoji: '📚'
+  },
+  {
+    id: 'two-letter-words',
+    name: {
+      nepali: 'दुई-अक्षरका शब्द',
+      english: 'Two-letter Words',
+      finnish: 'Kaksikirjaimiset Sanat'
+    },
+    emoji: '✌️'
   },
   {
     id: 'pronouns',
@@ -55,8 +73,8 @@ export const consonantGroups = [
 export const levels = [1, 2, 3];
 
 // Import questions from organized category files
-import { vowelsQuestions } from './questions/vowels.js';
-import { consonantsGroup1Questions } from './questions/consonants-group1.js';
+import { vowelsQuestions } from './qsn/vowels.js';
+import { consonantsGroup1Questions } from './qsn/consonants-group1.js';
 import { 
   consonantsGroup2Questions,
   consonantsGroup3Questions,
@@ -65,9 +83,11 @@ import {
   consonantsGroup6Questions,
   consonantsGroup7Questions,
   consonantsGroup8Questions
-} from './questions/consonants-other-groups.js';
-import { baarahkhariQuestions } from './questions/baarahkhari.js';
-import { pronounsQuestions } from './questions/pronouns.js';
+} from './qsn/consonants-other-groups.js';
+import { halantQuestions } from './qsn/halant.js';
+import { baarahkhariQuestions } from './qsn/baarahkhari.js';
+import { twoLetterWordsQuestions } from './qsn/two-letter-words.js';
+import { pronounsQuestions } from './qsn/pronouns.js';
 
 // Combine all questions from different category files
 export const questions = [
@@ -80,7 +100,9 @@ export const questions = [
   ...consonantsGroup6Questions,
   ...consonantsGroup7Questions,
   ...consonantsGroup8Questions,
+  ...halantQuestions,
   ...baarahkhariQuestions,
+  ...twoLetterWordsQuestions,
   ...pronounsQuestions
 ];
 
@@ -89,30 +111,28 @@ export const questions = [
  * ORGANIZED QUESTION STRUCTURE
  * ==========================================
  * 
- * All questions are now organized in separate files under:
- * src/data/questions/
+ * All questions are organized in separate files under:
+ * src/data/qsn/
  * 
- * Files:
- * - vowels.js                    ✅ All vowel questions (36 questions)
- * - consonants-group1.js          ✅ क to ङ questions (15 questions)
- * - consonants-other-groups.js    ✅ Groups 2-8 complete (73 questions)
- * - baarahkhari.js               ⏳ Baarahkhari questions (TODO: Add questions)
- * - pronouns.js                  ⏳ Pronoun questions (TODO: Add questions)
+ * Categories & Files:
+ * 🔤 vowels.js                    ✅ स्वर अक्षरहरु / Vowels / Vokaalit (36 questions)
+ * 📝 consonants-group1.js          ✅ व्यञ्जन (Group 1: क to ङ) (15 questions)
+ * 📝 consonants-other-groups.js    ✅ व्यञ्जन (Groups 2-8: च to ज्ञ) (73 questions)
+ * 🔠 halant.js                    ⏳ हलन्त / Halg Consonants (1 question - needs more)
+ * 📚 baarahkhari.js               ⏳ बाह्रखरी (TODO: Add questions)
+ * ✌️ two-letter-words.js          ⏳ दुई-अक्षरका शब्द / Two-letter Words (1 question - needs more)
+ * 👤 pronouns.js                  ⏳ सर्वनाम / Pronouns (TODO: Add questions)
  * 
- * TOTAL QUESTIONS: 124 (36 vowels + 88 consonants)
+ * TOTAL QUESTIONS: 126+ (36 vowels + 88 consonants + 2 new categories)
  * 
  * QUESTION TYPES:
  * - Multiple Choice: Standard questions with 4 options
  * - Grid Search: Find letters in 5x5 grid
- * - Matching: Match letters with pronunciations (Level 1)
+ * - Matching: Match letters with pronunciations
  * 
- * HOW TO ADD MORE QUESTIONS:
- * 1. Open the appropriate category file in src/data/questions/
- * 2. Add your question following the existing format
- * 3. The main questions.js file will automatically include it
- * 
- * ORIGINAL BACKUP:
- * Original questions backed up in: questions.backup.js
- * 
- * See README.md in questions/ folder for detailed instructions.
+ * HOW TO ADD/EDIT/DELETE QUESTIONS:
+ * 1. Navigate to src/data/qsn/
+ * 2. Open the appropriate category file
+ * 3. Add/edit/remove questions following the format
+ * 4. See qsn/README.md for detailed instructions
  */

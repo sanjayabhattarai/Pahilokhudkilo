@@ -32,6 +32,19 @@ const CategorySelection = ({ language, onCategorySelect, onBack }) => {
         </div>
 
         <button
+          onClick={() => window.open('/book.pdf', '_blank')}
+          className="w-full bg-kid-green text-white px-8 py-6 rounded-full text-2xl font-bold 
+                   hover:scale-105 transform transition-all duration-300 shadow-2xl
+                   hover:shadow-3xl active:scale-95 mb-4 flex items-center justify-center gap-3"
+        >
+          📖 {language === 'finnish' 
+            ? 'सामग्री पढ्नुहोस् / Read the Material / Lue materiaalia'
+            : language === 'english'
+            ? 'सामग्री पढ्नुहोस् / Read the Material'
+            : 'सामग्री पढ्नुहोस्'}
+        </button>
+
+        <button
           onClick={onBack}
           className="w-full bg-white text-kid-purple px-8 py-4 rounded-full text-2xl font-bold 
                    hover:scale-105 transform transition-all duration-300 shadow-lg
