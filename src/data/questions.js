@@ -20,15 +20,6 @@ export const categories = [
     hasGroups: true
   },
   {
-    id: 'halant',
-    name: {
-      nepali: 'हलन्त',
-      english: 'Halg Consonants',
-      finnish: 'Puolikonsonantti'
-    },
-    emoji: '🔠'
-  },
-  {
     id: 'baarahkhari',
     name: {
       nepali: 'बाह्रखरी',
@@ -36,6 +27,15 @@ export const categories = [
       finnish: 'Baarahkhari'
     },
     emoji: '📚'
+  },
+  {
+    id: 'halant',
+    name: {
+      nepali: 'हलन्त',
+      english: 'Halg Consonants',
+      finnish: 'Puolikonsonantti'
+    },
+    emoji: '🔠'
   },
   {
     id: 'two-letter-words',
@@ -106,33 +106,3 @@ export const questions = [
   ...pronounsQuestions
 ];
 
-/*
- * ==========================================
- * ORGANIZED QUESTION STRUCTURE
- * ==========================================
- * 
- * All questions are organized in separate files under:
- * src/data/qsn/
- * 
- * Categories & Files:
- * 🔤 vowels.js                    ✅ स्वर अक्षरहरु / Vowels / Vokaalit (36 questions)
- * 📝 consonants-group1.js          ✅ व्यञ्जन (Group 1: क to ङ) (15 questions)
- * 📝 consonants-other-groups.js    ✅ व्यञ्जन (Groups 2-8: च to ज्ञ) (73 questions)
- * 🔠 halant.js                    ⏳ हलन्त / Halg Consonants (1 question - needs more)
- * 📚 baarahkhari.js               ⏳ बाह्रखरी (TODO: Add questions)
- * ✌️ two-letter-words.js          ⏳ दुई-अक्षरका शब्द / Two-letter Words (1 question - needs more)
- * 👤 pronouns.js                  ⏳ सर्वनाम / Pronouns (TODO: Add questions)
- * 
- * TOTAL QUESTIONS: 126+ (36 vowels + 88 consonants + 2 new categories)
- * 
- * QUESTION TYPES:
- * - Multiple Choice: Standard questions with 4 options
- * - Grid Search: Find letters in 5x5 grid
- * - Matching: Match letters with pronunciations
- * 
- * HOW TO ADD/EDIT/DELETE QUESTIONS:
- * 1. Navigate to src/data/qsn/
- * 2. Open the appropriate category file
- * 3. Add/edit/remove questions following the format
- * 4. See qsn/README.md for detailed instructions
- */

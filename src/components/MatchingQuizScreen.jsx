@@ -19,7 +19,7 @@ function MatchingQuizScreen({
     [...currentQuestion.pairs].sort(() => Math.random() - 0.5)
   );
   const [pronunciations] = useState(() => 
-    [...currentQuestion.pairs].map(p => p.pronunciation).sort(() => Math.random() - 0.5)
+    [...currentQuestion.pairs].map(p => p.right).sort(() => Math.random() - 0.5)
   );
 
   const handleLetterClick = (letter) => {
@@ -44,7 +44,7 @@ function MatchingQuizScreen({
 
   const checkMatch = (letter, pronunciation) => {
     const correctPair = currentQuestion.pairs.find(
-      p => p.letter === letter && p.pronunciation === pronunciation
+      p => p.left === letter && p.right === pronunciation
     );
 
     if (correctPair) {
@@ -106,22 +106,22 @@ function MatchingQuizScreen({
             <h3 className="text-white text-2xl font-bold text-center mb-4">Letters</h3>
             {letters.map((pair) => (
               <button
-                key={pair.letter}
-                onClick={() => handleLetterClick(pair.letter)}
-                disabled={isMatched(pair.letter, null)}
+                key={pair.left}
+                onClick={() => handleLetterClick(pair.left)}
+                disabled={isMatched(pair.left, null)}
                 className={`
                   w-full p-6 rounded-xl text-3xl font-bold transition-all duration-300 transform
-                  ${isMatched(pair.letter, null) 
+                  ${isMatched(pair.left, null) 
                     ? 'bg-kid-green text-white scale-95 opacity-50 cursor-not-allowed' 
-                    : selectedLetter === pair.letter
-                    ? isIncorrect(pair.letter, selectedPronunciation)
+                    : selectedLetter === pair.left
+                    ? isIncorrect(pair.left, selectedPronunciation)
                       ? 'bg-red-500 text-white scale-105 animate-shake'
                       : 'bg-kid-yellow text-gray-800 scale-105 shadow-2xl ring-4 ring-white'
                     : 'bg-white text-gray-800 hover:scale-105 hover:shadow-xl'
                   }
                 `}
               >
-                {pair.letter}
+                {pair.left}
               </button>
             ))}
           </div>
