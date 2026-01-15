@@ -14,7 +14,7 @@ const LevelSelection = ({ onLevelSelect, onBack, availableLevels = levels }) => 
     <div className="min-h-screen bg-gradient-to-br from-kid-purple via-kid-blue to-kid-green p-4">
       <div className="max-w-4xl mx-auto py-8">
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4 drop-shadow-lg animate-bounce-in">
-          Choose Your Level 🎯
+          Choose Your Level 🪜
         </h2>
         <p className="text-2xl text-white text-center mb-12 drop-shadow">
           आफ्नो स्तर छान्नुहोस्

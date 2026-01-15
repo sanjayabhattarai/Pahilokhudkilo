@@ -70,44 +70,44 @@ const WelcomeScreen = ({ onStartGame }) => {
         </div>
       )}
 
-      <div className="text-center z-10 space-y-6 md:space-y-8 animate-bounce-in max-w-2xl mx-auto">
+      <div className="text-center z-10 space-y-3 md:space-y-4 animate-bounce-in max-w-3xl mx-auto">
         {/* Logo */}
-        <div className="flex justify-center mb-8 md:mb-10">
+        <div className="flex justify-center mb-4 md:mb-5">
           <img 
             src="/pahilokhudkilalogo.png" 
             alt="Pahilo Khudkilo Logo" 
-            className="h-64 md:h-80 object-contain drop-shadow-xl"
+            className="h-40 md:h-56 object-contain drop-shadow-xl"
           />
         </div>
 
         {/* Subtitle */}
-        <div className="space-y-3 md:space-y-4">
-          <p className="text-lg md:text-2xl text-white font-semibold drop-shadow-lg">
+        <div className="space-y-1 md:space-y-2">
+          <p className="text-base md:text-xl text-white font-semibold drop-shadow-lg">
             Learn Nepali in a Fun Way!
           </p>
         </div>
 
         {/* Feature highlights */}
-        <div className="grid grid-cols-3 gap-3 md:gap-6 py-6 md:py-8 px-2 md:px-4">
-          <div className="flex flex-col items-center space-y-3 bg-gradient-to-br from-blue-400 to-cyan-400 px-4 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <span className="text-4xl md:text-5xl">🎮</span>
-            <p className="text-sm md:text-base text-white font-semibold">Interactive</p>
+        <div className="grid grid-cols-3 gap-2 md:gap-3 py-3 md:py-4 px-2 md:px-4">
+          <div className="flex flex-col items-center space-y-1 md:space-y-2 bg-gradient-to-br from-blue-400 to-cyan-400 px-3 py-3 md:px-4 md:py-4 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+            <span className="text-2xl md:text-4xl">🎮</span>
+            <p className="text-xs md:text-sm text-white font-semibold">Interactive</p>
           </div>
-          <div className="flex flex-col items-center space-y-3 bg-gradient-to-br from-purple-400 to-pink-400 px-4 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <span className="text-4xl md:text-5xl">🧠</span>
-            <p className="text-sm md:text-base text-white font-semibold">Quick Learn</p>
+          <div className="flex flex-col items-center space-y-1 md:space-y-2 bg-gradient-to-br from-purple-400 to-pink-400 px-3 py-3 md:px-4 md:py-4 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+            <span className="text-2xl md:text-4xl">🧠</span>
+            <p className="text-xs md:text-sm text-white font-semibold">Quick Learn</p>
           </div>
-          <div className="flex flex-col items-center space-y-3 bg-gradient-to-br from-green-400 to-emerald-400 px-4 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <span className="text-4xl md:text-5xl">🥳</span>
-            <p className="text-sm md:text-base text-white font-semibold">Fun & Easy</p>
+          <div className="flex flex-col items-center space-y-1 md:space-y-2 bg-gradient-to-br from-green-400 to-emerald-400 px-3 py-3 md:px-4 md:py-4 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+            <span className="text-2xl md:text-4xl">🥳</span>
+            <p className="text-xs md:text-sm text-white font-semibold">Fun & Easy</p>
           </div>
         </div>
 
         {/* CTA Button */}
-        <div className="pt-4">
+        <div className="pt-2 md:pt-3">
           <button
             onClick={onStartGame}
-            className="bg-gradient-to-r from-kid-green via-kid-blue to-kid-yellow hover:shadow-3xl text-white px-10 md:px-16 py-4 md:py-5 rounded-full text-lg md:text-2xl font-bold 
+            className="bg-gradient-to-r from-kid-green via-kid-blue to-kid-yellow hover:shadow-3xl text-white px-8 md:px-14 py-3 md:py-4 rounded-full text-base md:text-xl font-bold 
                      hover:scale-110 transform transition-all duration-300 shadow-2xl
                      active:scale-95"
           >
@@ -119,7 +119,7 @@ const WelcomeScreen = ({ onStartGame }) => {
         </div>
 
         {/* Footer tagline */}
-        <p className="text-white text-xs md:text-sm pt-6 md:pt-8 drop-shadow-lg">
+        <p className="text-white text-xs md:text-sm pt-2 md:pt-3 drop-shadow-lg">
           Master Nepali alphabet one step at a time ✨
         </p>
       </div>
