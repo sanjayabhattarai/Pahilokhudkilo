@@ -40,7 +40,7 @@ export const twoLetterWordsQuestions = [
       english: 'Choose the correct answer: __मा',
       finnish: 'Valitse oikea vastaus: __मा'
     },
-    options: ['बा', 'का', 'आ', 'रा'],
+    options: ['बा', 'का', 'आ', 'रऺ'],
     correctAnswer: 'आ',
     explanation: {
       nepali: 'आ + मा = आमा (mother)',
@@ -94,7 +94,7 @@ export const twoLetterWordsQuestions = [
       english: 'Choose the correct answer: __ध',
       finnish: 'Valitse oikea vastaus: __ध'
     },
-    options: ['क', 'आ', 'दू', 'रा'],
+    options: ['क', 'आ', 'दू', 'रऺ'],
     correctAnswer: 'दू',
     explanation: {
       nepali: 'दू + ध = दूध (milk)',
@@ -184,8 +184,8 @@ export const twoLetterWordsQuestions = [
       english: 'Choose the correct answer: __तो',
       finnish: 'Valitse oikea vastaus: __तो'
     },
-    options: ['ने', 'छ', 'आ', 'रा'],
-    correctAnswer: 'रा',
+    options: ['ने', 'छ', 'आ', 'रऺ'],
+    correctAnswer: 'रऺ',
     explanation: {
       nepali: 'रा + तो = रातो (red)',
       english: 'रा + तो = रातो (red)',

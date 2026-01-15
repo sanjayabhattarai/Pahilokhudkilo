@@ -1,6 +1,6 @@
 import { levels } from '../data/questions';
 
-const LevelSelection = ({ onLevelSelect, onBack }) => {
+const LevelSelection = ({ onLevelSelect, onBack, availableLevels = levels }) => {
   const levelColors = [
     'from-kid-green to-kid-blue',
     'from-kid-yellow to-kid-orange',
@@ -21,18 +21,18 @@ const LevelSelection = ({ onLevelSelect, onBack }) => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {levels.map((level, index) => (
+          {availableLevels.map((level, index) => (
             <button
               key={level}
               onClick={() => onLevelSelect(level)}
-              className={`bg-gradient-to-br ${levelColors[index]} text-white px-8 py-12 rounded-3xl text-3xl font-bold 
+              className={`bg-gradient-to-br ${levelColors[level - 1]} text-white px-6 py-8 rounded-2xl text-2xl font-bold 
                        hover:scale-105 transform transition-all duration-300 shadow-2xl
-                       hover:shadow-3xl active:scale-95 flex flex-col items-center gap-4`}
+                       hover:shadow-3xl active:scale-95 flex flex-col items-center gap-3`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <span className="text-6xl">{levelEmojis[index]}</span>
+              <span className="text-5xl">{levelEmojis[level - 1]}</span>
               <span>Level {level}</span>
-              <span className="text-xl font-normal">{levelLabels[index]}</span>
+              <span className="text-lg font-normal">{levelLabels[level - 1]}</span>
             </button>
           ))}
         </div>

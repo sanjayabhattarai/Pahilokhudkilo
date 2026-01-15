@@ -190,6 +190,7 @@ function App() {
         <LevelSelection
           onLevelSelect={handleLevelSelect}
           onBack={handleBackFromLevel}
+          availableLevels={selectedCategory?.availableLevels}
         />
       )}
       

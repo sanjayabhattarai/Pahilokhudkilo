@@ -20,13 +20,13 @@ const CategorySelection = ({ language, onCategorySelect, onBack }) => {
             <button
               key={category.id}
               onClick={() => onCategorySelect(category)}
-              className="bg-white text-kid-purple px-6 py-10 rounded-3xl text-xl md:text-2xl font-bold 
+              className="bg-white text-kid-purple px-4 py-6 rounded-2xl text-lg md:text-xl font-bold 
                        hover:scale-105 transform transition-all duration-300 shadow-2xl
-                       hover:shadow-3xl active:scale-95 flex flex-col items-center gap-4"
+                       hover:shadow-3xl active:scale-95 flex flex-col items-center gap-3"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <span className="text-5xl">{category.emoji}</span>
-              <span className="text-center leading-relaxed">{getDisplayName(category)}</span>
+              <span className="text-4xl">{category.emoji}</span>
+              <span className="text-center leading-relaxed text-sm">{getDisplayName(category)}</span>
             </button>
           ))}
         </div>

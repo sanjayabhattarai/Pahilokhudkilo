@@ -35,7 +35,8 @@ export const categories = [
       english: 'Halg Consonants',
       finnish: 'Puolikonsonantti'
     },
-    emoji: '🔠'
+    emoji: '🔠',
+    availableLevels: [1]
   },
   {
     id: 'two-letter-words',
