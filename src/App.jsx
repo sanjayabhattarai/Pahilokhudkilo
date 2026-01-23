@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { questions } from './data/questions';
 import WelcomeScreen from './components/WelcomeScreen';
 import LanguageModal from './components/LanguageModal';
+import ModeSelection from './components/ModeSelection';
 import CategorySelection from './components/CategorySelection';
 import ConsonantGroupSelection from './components/ConsonantGroupSelection';
 import LevelSelection from './components/LevelSelection';
@@ -45,7 +46,7 @@ function App() {
 
   const handleLanguageSelect = (language) => {
     setSelectedLanguage(language);
-    setCurrentScreen('categorySelection');
+    setCurrentScreen('modeSelection');
   };
 
   const handleCategorySelect = (category) => {
@@ -72,9 +73,19 @@ function App() {
     setIsAnswered(false);
   };
 
-  const handleBackFromCategory = () => {
+  const handleModeSelect = (mode) => {
+    if (mode === 'game') {
+      setCurrentScreen('categorySelection');
+    }
+  };
+
+  const handleBackFromMode = () => {
     setCurrentScreen('languageModal');
     setSelectedLanguage(null);
+  };
+
+  const handleBackFromCategory = () => {
+    setCurrentScreen('modeSelection');
   };
 
   const handleBackFromConsonantGroup = () => {
@@ -153,7 +164,7 @@ function App() {
   };
 
   const handleBackToMenu = () => {
-    setCurrentScreen('categorySelection');
+    setCurrentScreen('modeSelection');
     setSelectedCategory(null);
     setSelectedConsonantGroup(null);
     setSelectedLevel(null);
@@ -172,6 +183,14 @@ function App() {
 
       {currentScreen === 'languageModal' && (
         <LanguageModal onLanguageSelect={handleLanguageSelect} />
+      )}
+
+      {currentScreen === 'modeSelection' && (
+        <ModeSelection 
+          language={selectedLanguage}
+          onModeSelect={handleModeSelect}
+          onBack={handleBackFromMode}
+        />
       )}
 
       {currentScreen === 'categorySelection' && (
