@@ -58,22 +58,26 @@ const QuizScreen = ({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {currentQuestion.options.map((option, index) => {
               let buttonClass = "bg-kid-blue text-white hover:bg-opacity-80";
+              let isDisabled = false;
               
               if (isAnswered) {
+                // Correct answer was selected - show green for correct, gray for others
                 if (option === currentQuestion.correctAnswer) {
                   buttonClass = "bg-kid-green text-white animate-success";
-                } else if (option === selectedAnswer) {
-                  buttonClass = "bg-red-500 text-white animate-shake";
                 } else {
                   buttonClass = "bg-gray-300 text-gray-600 cursor-not-allowed";
                 }
+                isDisabled = true;
+              } else if (selectedAnswer === option) {
+                // Wrong answer selected - show red briefly
+                buttonClass = "bg-red-500 text-white animate-shake";
               }
 
               return (
                 <button
                   key={index}
                   onClick={() => onAnswerClick(option)}
-                  disabled={isAnswered}
+                  disabled={isDisabled}
                   className={`${buttonClass} px-8 py-6 rounded-full text-2xl font-bold 
                            transform transition-all duration-300 shadow-lg
                            hover:scale-105 active:scale-95 disabled:hover:scale-100`}

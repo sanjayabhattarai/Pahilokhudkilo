@@ -101,24 +101,27 @@ function App() {
 
   // Quiz Handlers
   const handleAnswerClick = (option) => {
-    if (isAnswered) return;
-
     setSelectedAnswer(option);
-    setIsAnswered(true);
 
     if (option === currentQuestion.correctAnswer) {
+      setIsAnswered(true);
       setScore(score + 1);
-    }
-
-    setTimeout(() => {
-      if (currentQuestionIndex < filteredQuestions.length - 1) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
+      
+      setTimeout(() => {
+        if (currentQuestionIndex < filteredQuestions.length - 1) {
+          setCurrentQuestionIndex(currentQuestionIndex + 1);
+          setSelectedAnswer(null);
+          setIsAnswered(false);
+        } else {
+          setCurrentScreen('score');
+        }
+      }, 600);
+    } else {
+      // Wrong answer - just show red briefly then allow retry
+      setTimeout(() => {
         setSelectedAnswer(null);
-        setIsAnswered(false);
-      } else {
-        setCurrentScreen('score');
-      }
-    }, 1500);
+      }, 500);
+    }
   };
 
   // Grid Quiz Handler

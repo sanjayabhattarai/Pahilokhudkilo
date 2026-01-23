@@ -12,7 +12,7 @@ export default {
         'kid-blue': '#4ECDC4',
         'kid-purple': '#A855F7',
         'kid-pink': '#F472B6',
-        'kid-green': '#34D399',
+        'kid-green': '#10B981',
       }
     },
   },

@@ -18,14 +18,14 @@ export const twoLetterWordsQuestions = [
       finnish: 'Yhdistä sanat oikeaan ääntämykseen.'
     },
     pairs: [
-      { left: 'आमा', right: 'mother' },
-      { left: 'बाबा', right: 'father' },
-      { left: 'दाइ', right: 'brother' },
-      { left: 'दिदि', right: 'sister' },
-      { left: 'घर', right: 'house' },
-      { left: 'दुध', right: 'milk' },
-      { left: 'रातो', right: 'red' },
-      { left: 'सेतो', right: 'white' }
+      { letter: 'आमा', pronunciation: 'mother' },
+      { letter: 'बाबा', pronunciation: 'father' },
+      { letter: 'दाइ', pronunciation: 'brother' },
+      { letter: 'दिदि', pronunciation: 'sister' },
+      { letter: 'घर', pronunciation: 'house' },
+      { letter: 'दुध', pronunciation: 'milk' },
+      { letter: 'रातो', pronunciation: 'red' },
+      { letter: 'सेतो', pronunciation: 'white' }
     ]
   },
 
