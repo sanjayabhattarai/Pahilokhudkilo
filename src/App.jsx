@@ -115,7 +115,7 @@ function App() {
         } else {
           setCurrentScreen('score');
         }
-      }, 600);
+      }, 500);
     } else {
       // Wrong answer - just show red briefly then allow retry
       setTimeout(() => {
