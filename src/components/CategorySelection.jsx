@@ -32,7 +32,10 @@ const CategorySelection = ({ language, onCategorySelect, onBack }) => {
         </div>
 
         <button
-          onClick={() => window.open('/book.pdf', '_blank')}
+          onClick={() => {
+            const pdfFile = language === 'finnish' ? '/book_fi_eng_nep.pdf' : '/book_eng_nep.pdf';
+            window.open(pdfFile, '_blank');
+          }}
           className="w-full bg-gradient-to-r from-kid-blue to-kid-green text-white px-6 md:px-8 py-4 md:py-5 rounded-full text-base md:text-lg font-bold 
                    hover:scale-105 transform transition-all duration-300 shadow-2xl
                    hover:shadow-3xl active:scale-95 mb-4 flex items-center justify-center gap-2 md:gap-3 flex-wrap"
