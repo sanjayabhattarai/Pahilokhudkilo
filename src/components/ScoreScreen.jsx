@@ -33,7 +33,7 @@ const ScoreScreen = ({ score, totalQuestions, level, onNextLevel, onBackToMenu }
     }
   }, [percentage]);
 
-  const hasNextLevel = level < 4;
+  const hasNextLevel = level < 3;
 
   return (
     <>
@@ -41,26 +41,26 @@ const ScoreScreen = ({ score, totalQuestions, level, onNextLevel, onBackToMenu }
         <DancingCelebration audioSrc="/madal-tune.mp3" />
       )}
       
-      <div className="min-h-screen bg-gradient-to-br from-kid-purple via-kid-pink to-kid-orange flex items-center justify-center p-4">
-        <div className="text-center animate-bounce-in max-w-2xl">
-          <h2 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-lg">
+      <div className="min-h-screen bg-gradient-to-br from-kid-purple via-kid-pink to-kid-orange flex items-center justify-center p-3 sm:p-4 md:p-6">
+        <div className="text-center animate-bounce-in max-w-2xl px-2">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 drop-shadow-lg">
             {emoji}
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
             Your Score
           </h3>
-          <p className="text-7xl md:text-9xl font-bold text-white mb-8 drop-shadow-lg">
+          <p className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-6 sm:mb-8 drop-shadow-lg">
             {score}/{totalQuestions}
           </p>
-          <p className="text-3xl md:text-4xl text-white mb-12 drop-shadow">
+          <p className="text-2xl sm:text-3xl md:text-4xl text-white mb-8 sm:mb-10 md:mb-12 drop-shadow px-4">
             {message}
           </p>
           
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {hasNextLevel && (
               <button
                 onClick={onNextLevel}
-                className="bg-kid-green text-white px-12 py-6 rounded-full text-2xl md:text-3xl font-bold 
+                className="bg-kid-green text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold 
                          hover:scale-110 transform transition-all duration-300 shadow-2xl
                          hover:shadow-3xl active:scale-95"
               >
@@ -70,7 +70,7 @@ const ScoreScreen = ({ score, totalQuestions, level, onNextLevel, onBackToMenu }
             
             <button
               onClick={onBackToMenu}
-              className="bg-white text-kid-purple px-12 py-6 rounded-full text-2xl md:text-3xl font-bold 
+              className="bg-white text-kid-purple px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold 
                        hover:scale-110 transform transition-all duration-300 shadow-2xl
                        hover:shadow-3xl active:scale-95"
             >

@@ -101,19 +101,19 @@ function GridQuizScreen({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-kid-pink via-kid-purple to-kid-blue p-6 flex flex-col items-center justify-center">
-      <div className="max-w-4xl w-full">
+    <div className="min-h-screen bg-gradient-to-br from-kid-pink via-kid-purple to-kid-blue p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center">
+      <div className="max-w-4xl w-full px-2">
         {/* Progress Bar */}
-        <div className="mb-6">
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-white font-bold text-lg">
+        <div className="mb-4 sm:mb-5 md:mb-6">
+          <div className="flex justify-between items-center mb-2 flex-wrap gap-2">
+            <span className="text-white font-bold text-sm sm:text-base md:text-lg">
               प्रश्न {currentQuestionIndex + 1} / {totalQuestions}
             </span>
-            <span className="text-white font-bold text-lg">
+            <span className="text-white font-bold text-sm sm:text-base md:text-lg">
               Question {currentQuestionIndex + 1} / {totalQuestions}
             </span>
           </div>
-          <div className="h-3 bg-white/30 rounded-full overflow-hidden">
+          <div className="h-2 sm:h-2.5 md:h-3 bg-white/30 rounded-full overflow-hidden">
             <div 
               className="h-full bg-kid-green transition-all duration-500"
               style={{ width: `${((currentQuestionIndex + 1) / totalQuestions) * 100}%` }}
@@ -122,22 +122,22 @@ function GridQuizScreen({
         </div>
 
         {/* Question Card */}
-        <div className="bg-white rounded-3xl shadow-2xl p-8 mb-6">
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 mb-4 sm:mb-5 md:mb-6">
           {/* Question Text */}
           <div className="text-center mb-8">
             {getQuestionText()}
           </div>
 
           {/* Letters to Find */}
-          <div className="mb-6 text-center">
-            <div className="text-lg font-semibold text-gray-700 mb-3">
+          <div className="mb-4 sm:mb-5 md:mb-6 text-center">
+            <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-700 mb-2 sm:mb-3">
               {selectedLanguage === 'finnish' ? 'Etsi:' : 'Find:'} 
             </div>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {currentQuestion.correctAnswers.map((letter, index) => (
                 <span 
                   key={index}
-                  className="inline-block px-4 py-2 bg-kid-yellow text-kid-purple font-bold text-xl rounded-lg border-2 border-kid-orange"
+                  className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-kid-yellow text-kid-purple font-bold text-base sm:text-lg md:text-xl rounded-lg border-2 border-kid-orange"
                 >
                   {letter}
                 </span>
@@ -146,7 +146,7 @@ function GridQuizScreen({
           </div>
 
           {/* Grid */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-4 sm:mb-5 md:mb-6 overflow-x-auto">
             <div className="inline-block">
               {currentQuestion.grid.map((row, rowIndex) => (
                 <div key={rowIndex} className="flex">
@@ -156,8 +156,8 @@ function GridQuizScreen({
                       onClick={() => handleCellClick(rowIndex, colIndex, letter)}
                       disabled={isCompleted}
                       className={`
-                        w-14 h-14 m-1 flex items-center justify-center
-                        text-2xl font-bold rounded-lg border-2
+                        w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 m-0.5 sm:m-1 flex items-center justify-center
+                        text-lg sm:text-xl md:text-2xl font-bold rounded-lg border-2
                         transition-all duration-200
                         ${getCellStyle(rowIndex, colIndex, letter)}
                         ${!isCompleted ? 'cursor-pointer' : 'cursor-default'}
@@ -178,7 +178,7 @@ function GridQuizScreen({
                 onClick={handleSubmit}
                 disabled={selectedCells.length === 0}
                 className={`
-                  px-8 py-4 rounded-2xl font-bold text-xl
+                  px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg md:text-xl
                   transition-all duration-200 transform
                   ${selectedCells.length > 0
                     ? 'bg-kid-green text-white hover:scale-105 shadow-lg hover:shadow-xl'
@@ -188,7 +188,7 @@ function GridQuizScreen({
               >
                 {selectedLanguage === 'finnish' ? 'Tarkista' : 'Submit'} ✓
               </button>
-              <div className="mt-3 text-sm text-gray-600">
+              <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600">
                 {selectedCells.length} / {currentQuestion.correctAnswers.length} selected
               </div>
             </div>
@@ -199,11 +199,11 @@ function GridQuizScreen({
             <div className="text-center">
               {selectedCells.filter(cell => currentQuestion.correctAnswers.includes(cell.letter)).length === currentQuestion.correctAnswers.length &&
                selectedCells.length === currentQuestion.correctAnswers.length ? (
-                <div className="text-3xl font-bold text-green-600 animate-bounce">
+                <div className="text-2xl sm:text-3xl font-bold text-green-600 animate-bounce">
                   🎉 {selectedLanguage === 'finnish' ? 'Oikein!' : 'Correct!'}
                 </div>
               ) : (
-                <div className="text-2xl font-bold text-orange-600">
+                <div className="text-xl sm:text-2xl font-bold text-orange-600">
                   {selectedLanguage === 'finnish' ? 'Yritä uudelleen!' : 'Try again!'}
                 </div>
               )}
@@ -211,10 +211,10 @@ function GridQuizScreen({
           )}
 
           {/* Back Button */}
-          <div className="text-center mt-8">
+          <div className="text-center mt-6 sm:mt-8">
             <button
               onClick={onBack}
-              className="bg-white text-kid-purple px-8 py-3 rounded-full text-xl font-bold 
+              className="bg-white text-kid-purple px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-base sm:text-lg md:text-xl font-bold 
                        hover:scale-105 transform transition-all duration-300 shadow-lg
                        hover:shadow-xl active:scale-95 border-2 border-kid-purple"
             >

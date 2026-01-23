@@ -84,33 +84,33 @@ function MatchingQuizScreen({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-kid-purple via-kid-pink to-kid-orange p-8">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-kid-purple via-kid-pink to-kid-orange p-3 sm:p-4 md:p-6 lg:p-8">
+      <div className="max-w-5xl mx-auto px-2">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="text-white text-lg mb-2">
+        <div className="text-center mb-4 sm:mb-6 md:mb-8">
+          <div className="text-white text-sm sm:text-base md:text-lg mb-2">
             Question {currentQuestionIndex + 1} of {totalQuestions}
           </div>
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 leading-tight px-2">
             {currentQuestion.question[selectedLanguage]}
           </h2>
-          <div className="text-kid-yellow text-xl font-semibold">
+          <div className="text-kid-yellow text-base sm:text-lg md:text-xl font-semibold">
             {matches.length} / {currentQuestion.pairs.length} matched
           </div>
         </div>
 
         {/* Matching Interface */}
-        <div className="grid grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
           {/* Letters Column */}
-          <div className="space-y-4">
-            <h3 className="text-white text-2xl font-bold text-center mb-4">Letters</h3>
+          <div className="space-y-3 sm:space-y-4">
+            <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold text-center mb-3 sm:mb-4">Letters</h3>
             {letters.map((pair) => (
               <button
                 key={pair.letter}
                 onClick={() => handleLetterClick(pair.letter)}
                 disabled={isMatched(pair.letter, null)}
                 className={`
-                  w-full p-6 rounded-xl text-3xl font-bold transition-all duration-300 transform
+                  w-full p-4 sm:p-5 md:p-6 rounded-xl text-2xl sm:text-3xl font-bold transition-all duration-300 transform
                   ${isMatched(pair.letter, null) 
                     ? 'bg-kid-green text-white scale-95 opacity-50 cursor-not-allowed' 
                     : selectedLetter === pair.letter
@@ -127,15 +127,15 @@ function MatchingQuizScreen({
           </div>
 
           {/* Pronunciations Column */}
-          <div className="space-y-4">
-            <h3 className="text-white text-2xl font-bold text-center mb-4">Pronunciation</h3>
+          <div className="space-y-3 sm:space-y-4">
+            <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold text-center mb-3 sm:mb-4">Pronunciation</h3>
             {pronunciations.map((pronunciation) => (
               <button
                 key={pronunciation}
                 onClick={() => handlePronunciationClick(pronunciation)}
                 disabled={isMatched(null, pronunciation)}
                 className={`
-                  w-full p-6 rounded-xl text-2xl font-bold transition-all duration-300 transform
+                  w-full p-4 sm:p-5 md:p-6 rounded-xl text-lg sm:text-xl md:text-2xl font-bold transition-all duration-300 transform
                   ${isMatched(null, pronunciation)
                     ? 'bg-kid-green text-white scale-95 opacity-50 cursor-not-allowed'
                     : selectedPronunciation === pronunciation
@@ -155,13 +155,13 @@ function MatchingQuizScreen({
         {/* Success Feedback */}
         {showFeedback && (
           <div className="text-center animate-bounce-in">
-            <div className="text-6xl mb-4">🎉</div>
-            <div className="text-white text-3xl font-bold">Perfect Match!</div>
+            <div className="text-5xl sm:text-6xl mb-3 sm:mb-4">🎉</div>
+            <div className="text-white text-2xl sm:text-3xl font-bold">Perfect Match!</div>
           </div>
         )}
 
         {/* Instructions */}
-        <div className="text-center text-white text-lg bg-white/20 rounded-xl p-4 backdrop-blur-sm mb-6">
+        <div className="text-center text-white text-sm sm:text-base md:text-lg bg-white/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm mb-4 sm:mb-6">
           Click a letter, then click its matching pronunciation
         </div>
 
@@ -169,7 +169,7 @@ function MatchingQuizScreen({
         <div className="text-center">
           <button
             onClick={onBack}
-            className="bg-white text-kid-purple px-8 py-3 rounded-full text-xl font-bold 
+            className="bg-white text-kid-purple px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-base sm:text-lg md:text-xl font-bold 
                      hover:scale-105 transform transition-all duration-300 shadow-lg
                      hover:shadow-xl active:scale-95 border-2 border-kid-purple"
           >
