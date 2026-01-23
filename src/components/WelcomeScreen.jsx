@@ -76,7 +76,7 @@ const WelcomeScreen = ({ onStartGame }) => {
           <img 
             src="/pahilokhudkilalogo.png" 
             alt="Pahilo Khudkilo Logo" 
-            className="h-40 md:h-56 object-contain drop-shadow-xl"
+            className="h-90 md:h-108 object-contain drop-shadow-xl"
           />
         </div>
 
