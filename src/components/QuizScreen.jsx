@@ -33,9 +33,21 @@ const QuizScreen = ({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-kid-yellow via-kid-blue to-kid-purple p-4">
+    <div className="min-h-screen bg-gradient-to-br from-kid-yellow via-kid-blue to-kid-purple p-4 relative">
+      {/* Back Button - Top Left Corner */}
+      <div className="max-w-4xl mx-auto pt-4 mb-4">
+        <button
+          onClick={onBack}
+          className="bg-white text-kid-purple px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-lg font-bold 
+                   hover:scale-105 transform transition-all duration-300 shadow-lg
+                   hover:shadow-xl active:scale-95 border-2 border-kid-purple"
+        >
+          ← Back
+        </button>
+      </div>
+
       {/* Progress Bar */}
-      <div className="max-w-4xl mx-auto pt-8">
+      <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-full h-6 mb-8 shadow-lg overflow-hidden">
           <div
             className="bg-kid-green h-full transition-all duration-500 rounded-full"
@@ -86,18 +98,6 @@ const QuizScreen = ({
                 </button>
               );
             })}
-          </div>
-
-          {/* Back Button */}
-          <div className="mt-8">
-            <button
-              onClick={onBack}
-              className="w-full bg-white text-kid-purple px-6 py-3 rounded-full text-xl font-bold 
-                       hover:scale-105 transform transition-all duration-300 shadow-lg
-                       hover:shadow-xl active:scale-95 border-2 border-kid-purple"
-            >
-              ← Back to Levels
-            </button>
           </div>
         </div>
       </div>
