@@ -39,25 +39,35 @@ const WelcomeScreen = ({ onStartGame }) => {
               <p className="text-center text-lg font-semibold text-kid-orange">
                 पहिलो खुड्किलो
               </p>
-              <p className="text-center text-base leading-relaxed">
-                Learn Nepali in a fun and interactive way! Our app is designed to help you master the Nepali alphabet step by step.
+              
+              <p className="text-base leading-relaxed">
+                Our Nepali language learning website is designed to make learning fun, interactive, and effective. All exercises and games are carefully developed based on the syllabus and learning materials created by <span className="font-semibold text-kid-purple">Luv Upadhyaya</span>, ensuring a structured and high-quality learning experience.
+              </p>
+              
+              <p className="text-base leading-relaxed">
+                The entire website has been designed and developed by <span className="font-semibold text-kid-blue">Sanjay Bhattarai</span>, combining modern technology with educational creativity.
+              </p>
+              
+              <p className="text-base leading-relaxed">
+                In our second phase, we will continue to expand the platform by adding new exercises and learning materials.
               </p>
               
               <div className="border-t-2 border-gray-200 pt-4 mt-4">
-                <p className="text-sm font-semibold text-kid-purple mb-3">Founders:</p>
-                <div className="space-y-2">
-                  <div className="bg-gradient-to-r from-kid-yellow to-kid-orange rounded-lg p-3">
-                    <p className="font-bold text-white">Lov Upadhya</p>
-                  </div>
-                  <div className="bg-gradient-to-r from-kid-blue to-kid-green rounded-lg p-3">
-                    <p className="font-bold text-white">Sanjaya Bhattarai</p>
-                  </div>
-                </div>
+                <p className="text-sm font-semibold text-kid-purple mb-2">Founded by:</p>
+                <p className="text-base">Luv Upadhyaya & Sanjay Bhattarai</p>
+                <p className="text-xs text-gray-500 mt-2">All rights reserved by the founders.</p>
               </div>
 
-              <p className="text-center text-xs text-gray-500 pt-2">
-                Made with ❤️ for Nepali learners
-              </p>
+              <div className="border-t-2 border-gray-200 pt-4 mt-4">
+                <p className="text-sm font-semibold text-kid-purple mb-2">Contact Us:</p>
+                <p className="text-sm">For suggestions and queries please email us at:</p>
+                <a 
+                  href="mailto:pahilokhudkila@gmail.com" 
+                  className="text-kid-blue font-semibold hover:underline break-all"
+                >
+                  pahilokhudkila@gmail.com
+                </a>
+              </div>
             </div>
 
             <button
