@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { questions } from './data/questions';
 import WelcomeScreen from './components/WelcomeScreen';
 import LanguageModal from './components/LanguageModal';
@@ -258,6 +259,8 @@ function App() {
           onBackToMenu={handleBackToMenu}
         />
       )}
+      
+      <Analytics />
     </>
   );
 }
