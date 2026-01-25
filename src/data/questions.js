@@ -32,7 +32,7 @@ export const categories = [
     id: 'halant',
     name: {
       nepali: 'हलन्त',
-      english: 'Halg Consonants',
+      english: 'Half Consonants',
       finnish: 'Puolikonsonantti'
     },
     emoji: '🔠',
