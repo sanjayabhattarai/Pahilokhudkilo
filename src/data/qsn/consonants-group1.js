@@ -88,12 +88,12 @@ export const consonantsGroup1Questions = [
     correctAnswer: 'nga'
   },
 
-  // ===== LEVEL 3 (Words) =====
+  // ===== LEVEL 2 (Words) =====
   {
     id: 41,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'कलम मा कुन अक्षर छ?',
       english: 'Which alphabet is in कलम?',
@@ -106,7 +106,7 @@ export const consonantsGroup1Questions = [
     id: 42,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'खाना मा कुन अक्षर छ?',
       english: 'Which alphabet is in खाना?',
@@ -119,7 +119,7 @@ export const consonantsGroup1Questions = [
     id: 43,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'गाई मा कुन अक्षर छ?',
       english: 'Which alphabet is in गाई?',
@@ -132,7 +132,7 @@ export const consonantsGroup1Questions = [
     id: 44,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'घर मा कुन अक्षर छ?',
       english: 'Which alphabet is in घर?',
@@ -145,7 +145,7 @@ export const consonantsGroup1Questions = [
     id: 45,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'काग मा कुन अक्षर छ?',
       english: 'Which alphabet is in काग?',
@@ -158,7 +158,7 @@ export const consonantsGroup1Questions = [
     id: 46,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'खसी मा कुन अक्षर छ?',
       english: 'Which alphabet is in खसी?',
@@ -171,7 +171,7 @@ export const consonantsGroup1Questions = [
     id: 47,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'गुलाफ मा कुन अक्षर छ?',
       english: 'Which alphabet is in गुलाफ?',
@@ -184,7 +184,7 @@ export const consonantsGroup1Questions = [
     id: 48,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'घडी मा कुन अक्षर छ?',
       english: 'Which alphabet is in घडी?',
@@ -197,7 +197,7 @@ export const consonantsGroup1Questions = [
     id: 49,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'कुकुर मा कुन अक्षर छ?',
       english: 'Which alphabet is in कुकुर?',
@@ -210,7 +210,7 @@ export const consonantsGroup1Questions = [
     id: 50,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'घाम मा कुन अक्षर छ?',
       english: 'Which alphabet is in घाम?',
@@ -223,7 +223,7 @@ export const consonantsGroup1Questions = [
     id: 51,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'नङ मा कुन अक्षर छ?',
       english: 'Which alphabet is in नङ (nail)?',
@@ -236,7 +236,7 @@ export const consonantsGroup1Questions = [
     id: 52,
     category: 'consonants',
     consonantGroup: 'group1',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'चङ्गा मा कुन अक्षर छ?',
       english: 'Which alphabet is in चङ्गा (kite)?',
@@ -244,5 +244,27 @@ export const consonantsGroup1Questions = [
     },
     options: ['च', 'ग', 'ङ', 'क'],
     correctAnswer: 'ङ'
+  },
+
+  // ===== LEVEL 3 (Grid) =====
+  {
+    id: 115,
+    category: 'consonants',
+    consonantGroup: 'group1',
+    level: 3,
+    type: 'grid',
+    question: {
+      nepali: 'यी अक्षरहरू फेला पार्नुहोस्',
+      english: 'Find These Letters',
+      finnish: 'Etsi nämä kirjeet'
+    },
+    grid: [
+      ['क', 'च', 'ख', 'प', 'ग'],
+      ['त', 'घ', 'म', 'ङ', 'ब'],
+      ['व', 'ज', 'य', 'द', 'न'],
+      ['ल', 'छ', 'र', 'थ', 'स'],
+      ['फ', 'झ', 'ड', 'ष', 'ह']
+    ],
+    correctAnswers: ['क', 'ख', 'ग', 'घ', 'ङ']
   }
 ];

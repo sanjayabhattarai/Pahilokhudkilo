@@ -625,12 +625,12 @@ export const consonantsGroup5Questions = [
     correctAnswer: 'ma'
   },
 
-  // ===== LEVEL 3 (Words) =====
+  // ===== LEVEL 2 (Words) =====
   {
     id: 87,
     category: 'consonants',
     consonantGroup: 'group5',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'पानी मा कुन अक्षर छ?',
       english: 'Which alphabet is in पानी?',
@@ -643,7 +643,7 @@ export const consonantsGroup5Questions = [
     id: 88,
     category: 'consonants',
     consonantGroup: 'group5',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'फल मा कुन अक्षर छ?',
       english: 'Which alphabet is in फल?',
@@ -656,7 +656,7 @@ export const consonantsGroup5Questions = [
     id: 89,
     category: 'consonants',
     consonantGroup: 'group5',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'बिरालो मा कुन अक्षर छ?',
       english: 'Which alphabet is in बिरालो?',
@@ -669,7 +669,7 @@ export const consonantsGroup5Questions = [
     id: 90,
     category: 'consonants',
     consonantGroup: 'group5',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'भात मा कुन अक्षर छ?',
       english: 'Which alphabet is in भात?',
@@ -682,7 +682,7 @@ export const consonantsGroup5Questions = [
     id: 91,
     category: 'consonants',
     consonantGroup: 'group5',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'माछा मा कुन अक्षर छ?',
       english: 'Which alphabet is in माछा?',
@@ -793,12 +793,12 @@ export const consonantsGroup6Questions = [
     correctAnswer: 'va'
   },
 
-  // ===== LEVEL 3 (Words) =====
+  // ===== LEVEL 2 (Words) =====
   {
     id: 96,
     category: 'consonants',
     consonantGroup: 'group6',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'यो मा कुन अक्षर छ?',
       english: 'Which alphabet is in यो?',
@@ -811,7 +811,7 @@ export const consonantsGroup6Questions = [
     id: 97,
     category: 'consonants',
     consonantGroup: 'group6',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'रङ मा कुन अक्षर छ?',
       english: 'Which alphabet is in रङ?',
@@ -824,7 +824,7 @@ export const consonantsGroup6Questions = [
     id: 98,
     category: 'consonants',
     consonantGroup: 'group6',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'लामो मा कुन अक्षर छ?',
       english: 'Which alphabet is in लामो?',
@@ -837,7 +837,7 @@ export const consonantsGroup6Questions = [
     id: 99,
     category: 'consonants',
     consonantGroup: 'group6',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'वन मा कुन अक्षर छ?',
       english: 'Which alphabet is in वन?',
@@ -1089,12 +1089,12 @@ export const consonantsGroup8Questions = [
     correctAnswer: 'gya'
   },
 
-  // ===== LEVEL 3 (Words) =====
+  // ===== LEVEL 2 (Words) =====
   {
     id: 111,
     category: 'consonants',
     consonantGroup: 'group8',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'क्षमा मा कुन अक्षर छ?',
       english: 'Which alphabet is in क्षमा?',
@@ -1107,7 +1107,7 @@ export const consonantsGroup8Questions = [
     id: 112,
     category: 'consonants',
     consonantGroup: 'group8',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'त्रिकोण मा कुन अक्षर छ?',
       english: 'Which alphabet is in त्रिकोण?',
@@ -1120,7 +1120,7 @@ export const consonantsGroup8Questions = [
     id: 113,
     category: 'consonants',
     consonantGroup: 'group8',
-    level: 3,
+    level: 2,
     question: {
       nepali: 'ज्ञान मा कुन अक्षर छ?',
       english: 'Which alphabet is in ज्ञान?',

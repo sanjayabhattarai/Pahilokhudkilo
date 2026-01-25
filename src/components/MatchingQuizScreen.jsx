@@ -100,17 +100,17 @@ function MatchingQuizScreen({
         </div>
 
         {/* Matching Interface */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
+        <div className="grid grid-cols-2 gap-2 sm:gap-4 md:gap-6 lg:gap-8 mb-6 sm:mb-8">
           {/* Letters Column */}
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold text-center mb-3 sm:mb-4">Letters</h3>
+          <div className="space-y-2 sm:space-y-3 md:space-y-4">
+            <h3 className="text-white text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-center mb-2 sm:mb-3 md:mb-4">Letters</h3>
             {letters.map((pair) => (
               <button
                 key={pair.letter}
                 onClick={() => handleLetterClick(pair.letter)}
                 disabled={isMatched(pair.letter, null)}
                 className={`
-                  w-full p-4 sm:p-5 md:p-6 rounded-xl text-2xl sm:text-3xl font-bold transition-all duration-300 transform
+                  w-full p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl text-xl sm:text-2xl md:text-3xl font-bold transition-all duration-300 transform
                   ${isMatched(pair.letter, null) 
                     ? 'bg-kid-green text-white scale-95 opacity-50 cursor-not-allowed' 
                     : selectedLetter === pair.letter
@@ -127,15 +127,15 @@ function MatchingQuizScreen({
           </div>
 
           {/* Pronunciations Column */}
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold text-center mb-3 sm:mb-4">Pronunciation</h3>
+          <div className="space-y-2 sm:space-y-3 md:space-y-4">
+            <h3 className="text-white text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-center mb-2 sm:mb-3 md:mb-4">Pronunciation</h3>
             {pronunciations.map((pronunciation) => (
               <button
                 key={pronunciation}
                 onClick={() => handlePronunciationClick(pronunciation)}
                 disabled={isMatched(null, pronunciation)}
                 className={`
-                  w-full p-4 sm:p-5 md:p-6 rounded-xl text-lg sm:text-xl md:text-2xl font-bold transition-all duration-300 transform
+                  w-full p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all duration-300 transform
                   ${isMatched(null, pronunciation)
                     ? 'bg-kid-green text-white scale-95 opacity-50 cursor-not-allowed'
                     : selectedPronunciation === pronunciation
